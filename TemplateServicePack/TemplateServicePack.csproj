@@ -1,0 +1,31 @@
+<!-- templates-playground/TemplatePack.csproj -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageId>Template.Service.Pack.CSharp</PackageId>
+    <PackageVersion>1.0</PackageVersion>
+    <Title>Template Service Pack</Title>
+    <Authors>Stanislav Kozlov</Authors>
+    <Description>Template Service Pack</Description>
+    <PackageTags>dotnet-new;templates;api;services</PackageTags>
+    <PackageProjectUrl>http://192.168.3.45/services/servicetemplate</PackageProjectUrl>
+
+    <PackageType>Template</PackageType>
+    <TargetFramework>net8.0</TargetFramework>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Company>EAPO</Company>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+</Project>

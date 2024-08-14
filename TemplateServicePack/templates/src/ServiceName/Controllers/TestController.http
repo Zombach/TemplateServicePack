@@ -1,0 +1,7 @@
+@ServiceName_HostAddress = http://localhost:5195
+
+POST {{ServiceName_HostAddress}}/api/Test/hello
+Content-Type: application/json
+{
+    "name": "Stas"
+}
